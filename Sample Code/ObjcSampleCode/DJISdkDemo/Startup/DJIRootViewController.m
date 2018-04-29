@@ -8,6 +8,7 @@
 #import "DJIRootViewController.h"
 #import "ComponentSelectionViewController.h"
 #import "BluetoothConnectorViewController.h"
+#import "TelemetryViewController.h"
 #import "DemoAlertView.h"
 #import "DemoUtilityMacro.h"
 #import "AppActivationViewController.h"
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *productFirmwarePackageVersion;
 @property (weak, nonatomic) IBOutlet UILabel *debugModeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *connectButton;
+@property (weak, nonatomic) IBOutlet UIButton *telemetryButton;
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 
 @property (nonatomic) AppActivationViewController *appActivationVC;
@@ -107,6 +109,11 @@
     if(self.product){
         [self updateStatusBasedOn:self.product];
     }
+}
+
+-(IBAction)onTelemetryButtonClicked:(id)sender {
+    TelemetryViewController *telemetryVC = [[TelemetryViewController alloc] init];
+    [self.navigationController pushViewController:telemetryVC animated:YES];
 }
 
 -(IBAction) onConnectButtonClicked:(id)sender

@@ -44,6 +44,8 @@
 		3BA7667B19FE38130077CA52 /* stick_hold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA7667819FE38130077CA52 /* stick_hold.png */; };
 		3BA7667C19FE38130077CA52 /* stick_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA7667919FE38130077CA52 /* stick_normal.png */; };
 		3BF0597B1BB255BD00F21C88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0597A1BB255BD00F21C88 /* LaunchScreen.xib */; };
+		52CFC00F20967B3F00F39F09 /* TelemetryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CFC00E20967B3F00F39F09 /* TelemetryViewController.xib */; };
+		52CFC01120967B6700F39F09 /* TelemetryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC01020967B6700F39F09 /* TelemetryViewController.m */; };
 		865297AC1E4924400021E066 /* KeyedInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865297AA1E4924400021E066 /* KeyedInterfaceViewController.m */; };
 		865297AD1E4924400021E066 /* KeyedInterfaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865297AB1E4924400021E066 /* KeyedInterfaceViewController.xib */; };
 		ACB121061E8B1010006EE2DB /* TimelineMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB121051E8B1010006EE2DB /* TimelineMissionViewController.m */; };
@@ -203,6 +205,9 @@
 		3BA7667819FE38130077CA52 /* stick_hold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_hold.png; sourceTree = "<group>"; };
 		3BA7667919FE38130077CA52 /* stick_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_normal.png; sourceTree = "<group>"; };
 		3BF0597A1BB255BD00F21C88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
+		52CFC00E20967B3F00F39F09 /* TelemetryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelemetryViewController.xib; sourceTree = "<group>"; };
+		52CFC01020967B6700F39F09 /* TelemetryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TelemetryViewController.m; sourceTree = "<group>"; };
+		52CFC01220967B8D00F39F09 /* TelemetryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelemetryViewController.h; sourceTree = "<group>"; };
 		865297A91E4924400021E066 /* KeyedInterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedInterfaceViewController.h; sourceTree = "<group>"; };
 		865297AA1E4924400021E066 /* KeyedInterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyedInterfaceViewController.m; sourceTree = "<group>"; };
 		865297AB1E4924400021E066 /* KeyedInterfaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyedInterfaceViewController.xib; sourceTree = "<group>"; };
@@ -474,6 +479,7 @@
 		3B2CDD6B1C3CC21D00DB096B /* FlightController */ = {
 			isa = PBXGroup;
 			children = (
+				52CFC00D20967AF400F39F09 /* Telemetry */,
 				3B2CDD701C3CC21D00DB096B /* FCActionsTableViewController.h */,
 				3B2CDD711C3CC21D00DB096B /* FCActionsTableViewController.m */,
 				B814FF8B1C98102C000D32AC /* IntelligentAssistant */,
@@ -576,6 +582,16 @@
 				3B5E78FD1C3DDD0A00A097B8 /* FCGeneralControlViewController.xib */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		52CFC00D20967AF400F39F09 /* Telemetry */ = {
+			isa = PBXGroup;
+			children = (
+				52CFC00E20967B3F00F39F09 /* TelemetryViewController.xib */,
+				52CFC01020967B6700F39F09 /* TelemetryViewController.m */,
+				52CFC01220967B8D00F39F09 /* TelemetryViewController.h */,
+			);
+			path = Telemetry;
 			sourceTree = "<group>";
 		};
 		6ABAC78C9EBB40FA6C72509F /* Pods */ = {
@@ -963,7 +979,6 @@
 				F4FE84ED1BD8CEF600E51FB4 /* Embed Frameworks */,
 				3836D72E1C10EF3C0075180B /* Prepare DJISDK Framework for AppStore Upload */,
 				00CEDD5ABC221F65DA1E3089 /* [CP] Embed Pods Frameworks */,
-				21C9A0DCBD1CDD798ECB20A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -985,7 +1000,7 @@
 				ORGANIZATIONNAME = DJI;
 				TargetAttributes = {
 					3B16A8E719D12167008C1818 = {
-						DevelopmentTeam = 7UL3LRJL93;
+						DevelopmentTeam = 755RA7R75G;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
@@ -1071,6 +1086,7 @@
 				3B2CDD901C3CC21D00DB096B /* FCVirtualStickViewController.xib in Resources */,
 				B821D3F71C31643D0014ADBD /* DemoPushInfoViewController.xib in Resources */,
 				3B16A8FE19D12167008C1818 /* Images.xcassets in Resources */,
+				52CFC00F20967B3F00F39F09 /* TelemetryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,28 +1099,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DJISdkDemo/Pods-DJISdkDemo-frameworks.sh",
+				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DJISdkDemo/Pods-DJISdkDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		21C9A0DCBD1CDD798ECB20A5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DJISdkDemo/Pods-DJISdkDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2461DF5504E192B8EA4711D8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1113,13 +1117,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DJISdkDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3836D72E1C10EF3C0075180B /* Prepare DJISDK Framework for AppStore Upload */ = {
@@ -1194,6 +1201,7 @@
 				F47C29BE1BDA2304001E6A75 /* ComponentSelectionViewController.m in Sources */,
 				B821D3F61C31643D0014ADBD /* DemoPushInfoViewController.m in Sources */,
 				3B2CDD851C3CC21D00DB096B /* FCCompassViewController.m in Sources */,
+				52CFC01120967B6700F39F09 /* TelemetryViewController.m in Sources */,
 				3B16A8F819D12167008C1818 /* main.m in Sources */,
 				B83731EC1ED3139C00B7AEE9 /* AppActivationViewController.m in Sources */,
 				ACB121061E8B1010006EE2DB /* TimelineMissionViewController.m in Sources */,
@@ -1321,7 +1329,7 @@
 				CODE_SIGN_ENTITLEMENTS = DJISdkDemo/DJISdkDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7UL3LRJL93;
+				DEVELOPMENT_TEAM = 755RA7R75G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1339,7 +1347,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagovista.dronetek.controlproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1359,7 +1367,7 @@
 				CODE_SIGN_ENTITLEMENTS = DJISdkDemo/DJISdkDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7UL3LRJL93;
+				DEVELOPMENT_TEAM = 755RA7R75G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1377,7 +1385,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagovista.dronetek.controlproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

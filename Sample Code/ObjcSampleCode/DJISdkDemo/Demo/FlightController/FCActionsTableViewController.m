@@ -15,6 +15,7 @@
 #import "FCFlightLimitationViewController.h"
 #import "FCGeneralControlViewController.h"
 #import "FCIntelligentAssistantViewController.h"
+#import "TelemetryViewController.h"
 #import <DJISDK/DJISDK.h>
 
 @interface FCActionsTableViewController ()
@@ -35,7 +36,8 @@
     DemoSettingItem* item2 = [DemoSettingItem itemWithName:@"Flight Limitation" andClass:[FCFlightLimitationViewController class]];
     DemoSettingItem* item3 = [DemoSettingItem itemWithName:@"Landing Gear" andClass:[FCLandingGearViewController class]];
     DemoSettingItem* item4 = [DemoSettingItem itemWithName:@"Flight Assistant" andClass:[FCIntelligentAssistantViewController class]];
-    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:@[item0, item1, item2]];
+    DemoSettingItem* item5 = [DemoSettingItem itemWithName:@"Telemetry Viewer" andClass:[TelemetryViewController class]];
+    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:@[item0, item1, item2, item5]];
     if (fc && fc.isLandingGearMovable) {
         [array addObject:item3];
     }

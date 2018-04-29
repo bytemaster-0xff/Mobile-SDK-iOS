@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,6 +17,7 @@
                 <outlet property="productFirmwarePackageVersion" destination="Gkz-4X-7cj" id="riK-CX-dZ4"/>
                 <outlet property="productModel" destination="PI2-Yc-rWq" id="O5q-Wv-I40"/>
                 <outlet property="sdkVersionLabel" destination="oMC-hP-kHn" id="Kyf-mc-dbE"/>
+                <outlet property="telemetryButton" destination="5bR-SQ-Gk2" id="PfC-Ao-Zhu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,8 +36,8 @@
                     <color key="textColor" red="0.24406352639198303" green="0.24406352639198303" blue="0.24406352639198303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firmware Package Version: Not Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkz-4X-7cj">
-                    <rect key="frame" x="54" y="143" width="560" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Firmware Package Version: Not Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkz-4X-7cj">
+                    <rect key="frame" x="54" y="132" width="560" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="560" id="RIB-0q-OzL"/>
                         <constraint firstAttribute="height" constant="21" id="aLl-tQ-bWp"/>
@@ -102,6 +104,20 @@
                     <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-SQ-Gk2">
+                    <rect key="frame" x="216" y="161" width="235" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="320-LL-aFq"/>
+                        <constraint firstAttribute="width" constant="235" id="rCd-q7-mvF"/>
+                    </constraints>
+                    <state key="normal" title="Telemetry" backgroundImage="btn">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onTelemetryButtonClicked:" destination="-1" eventType="touchUpInside" id="qEs-u0-LWy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -115,6 +131,7 @@
                     <variation key="heightClass=compact" constant="-140"/>
                     <variation key="heightClass=compact-widthClass=regular" constant="-144"/>
                 </constraint>
+                <constraint firstItem="5bR-SQ-Gk2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="161" id="LbW-6o-lgg"/>
                 <constraint firstItem="Bak-4S-0aB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="OC7-QQ-kBE"/>
                 <constraint firstItem="eCe-rU-in2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R8x-9v-fWv"/>
                 <constraint firstItem="eCe-rU-in2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-103" id="i8F-ru-sHa">
@@ -129,6 +146,7 @@
                 <constraint firstItem="lja-dC-YIU" firstAttribute="centerX" secondItem="MAn-Va-gIb" secondAttribute="centerX" id="oUy-yx-38o"/>
                 <constraint firstItem="lja-dC-YIU" firstAttribute="top" secondItem="MAn-Va-gIb" secondAttribute="bottom" constant="8" id="rEZ-sG-hBR"/>
                 <constraint firstItem="oMC-hP-kHn" firstAttribute="top" secondItem="lja-dC-YIU" secondAttribute="bottom" constant="27" id="uyh-zB-dww"/>
+                <constraint firstItem="5bR-SQ-Gk2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vS8-2e-ko2"/>
                 <constraint firstItem="oMC-hP-kHn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMC-NS-Huf">
                     <variation key="widthClass=compact" constant="2"/>
                 </constraint>
