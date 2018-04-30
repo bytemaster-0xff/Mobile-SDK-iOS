@@ -12,6 +12,7 @@
 #import "DemoAlertView.h"
 #import "DemoUtilityMacro.h"
 #import "AppActivationViewController.h"
+#import "FCCompassViewController.h"
 
 #define ENTER_DEBUG_MODE 0
 #define ENABLE_REMOTE_LOGGER 0
@@ -113,6 +114,7 @@
 
 -(IBAction)onTelemetryButtonClicked:(id)sender {
     TelemetryViewController *telemetryVC = [[TelemetryViewController alloc] init];
+    
     [self.navigationController pushViewController:telemetryVC animated:YES];
 }
 
